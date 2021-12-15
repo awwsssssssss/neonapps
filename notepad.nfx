@@ -1,12 +1,15 @@
 @echo off
+title Notepad
 mkdir notepad
 cd notepad
 :home
 cls
 echo Neon/Notepad
-echo 1.Read 2.New
+echo 1.Read 2.New 3.Exit
+set/p a="Notepad>"
 if /i "%a%"=="1" goto read
 if /i "%a%"=="2" goto new
+if /i "%a%"=="3" exit
 goto home
 :read
 set a=
