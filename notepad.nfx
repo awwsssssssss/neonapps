@@ -1,0 +1,21 @@
+@echo off
+mkdir notepad
+cd notepad
+:home
+cls
+echo Neon/Notepad
+echo 1.Read 2.New
+if /i "%a%"=="1" goto read
+if /i "%a%"=="2" goto new
+goto home
+:read
+set a=
+set/p a="Read Files>"
+type %a%
+pause
+goto home
+:new
+set a=
+set/p a="Name File>"
+more >%a%
+goto home
